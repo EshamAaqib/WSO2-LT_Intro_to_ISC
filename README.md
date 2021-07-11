@@ -51,3 +51,32 @@ openssl rsa -in privatekey.pem -outform PEM -pubout -out publickey.pem
 
 ###### Public key file uploaded to the Question 3 folder (Link at the bottom of the document)
 
+## 4. Using the RSA public key stored at https://drive.google.com/file/d/18E4pYx8o04o0PlhC9Dmboaz68ApU3V3N/view?usp=sharing to encrypt the PDF https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-100.pdf
+
+### As the PDF file is a larger file I went ahead and created a random key by executing the following
+
+```
+openssl rand -base64 32 > key.bin
+```
+
+### Then I went ahead and encrypted the random key using the public key mentioned above. I executed the following
+
+```
+openssl rsautl -encrypt -inkey public.pem -pubin -in key.bin -out key.bin.enc
+```
+
+### Now I encrypted the large PDF file using the random key by executing the following 
+
+```
+penssl enc -aes-256-cbc -salt -in nistspecialpublication800-100.pdf -out nistspecialpublication800-100.pdf.enc -pass file:./key.bin
+```
+
+###### At this point the user will have to decrypt the random key file (key.bin) using the private key and use the decrypted key file to decrypt the encrypted PDF file
+
+### Screenshot 
+
+![Screenshot from 2021-07-11 00-47-43](https://user-images.githubusercontent.com/75664650/125187009-0b9a0580-e24b-11eb-8f90-ba063dbeeb03.png)
+
+###### Encrypted key file and the pdf file has been uploaded to the Question 4 folder (Link at the bottom of this document)
+
+
