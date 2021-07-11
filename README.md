@@ -154,6 +154,29 @@ print(key)
 ![Screenshot from 2021-07-11 04-53-29](https://user-images.githubusercontent.com/75664650/125194029-15ccfb80-e26d-11eb-8505-ee6f104619a7.png)
 
 
+## 10.  Using the GPG key located at https://keys.openpgp.org/search?q=ayomawdb%40gmail.com to encrypt the PDF document at https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-100.pdf
+
+### First I downloaded the gpg key and executed the following to import the key 
+
+```
+gpg --import 34FB0BA2155A9D20D248BD0E7D11327265445CF2.asc
+```
+
+### Then I executed the following to encrypt the file
+
+```
+gpg --recipient ayomawdb@gmail.com --encrypt nistspecialpublication800-100.pdf
+```
+
+###### Encrypted file uploaded to Question 10 folder. (Link at the bottom of the document)
+
+### Screenshots
+
+![Screenshot from 2021-07-11 05-01-07](https://user-images.githubusercontent.com/75664650/125194299-419cb100-e26e-11eb-9dbc-3cd97ba72f9d.png)
+
+## 11. Creating a GPG key for yourself and upload the public key to any public keyserver
+
+### GPG Key - https://keys.openpgp.org/vks/v1/by-fingerprint/80FC07695162673596C2C75296C3E1C8CE31F236
 
 
 
