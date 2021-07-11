@@ -143,6 +143,7 @@ print(key)
 ```
 ###### Code has been uploaded to the Question 8 folder as well. (Link at the bottom of the document)
 
+
 ## 9. Using https://hashcat.net/hashcat/ and the wordlist available at https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/phpbb.txt to crack the MD5 value "3c2223212b6dde34bcf86b580bdb71d4" and recover the password
 
 ### Cracked Password  -  woohooyeah
@@ -179,6 +180,10 @@ gpg --recipient ayomawdb@gmail.com --encrypt nistspecialpublication800-100.pdf
 ### GPG Key - https://keys.openpgp.org/vks/v1/by-fingerprint/80FC07695162673596C2C75296C3E1C8CE31F236
 
 
+## 12. Calculate the CVSS 3.1 score for a security issue that can be exploited over the network, with the help of a person-in-the-middle attack, via an admin user of an application, without any additional user interactions and without having an impact on any other systems
 
+### CVSS 3.1 vector string - CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:N
+
+## 
 
 
