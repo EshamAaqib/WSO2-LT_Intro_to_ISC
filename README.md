@@ -31,4 +31,23 @@ openssl enc -aes-256-cbc -pass pass:wso2training -p -in nistspecialpublication80
 
 ###### Encrypted file uploaded to Question 2 Folder (Link at the bottom of the document)
 
+## 3. Creating a RSA key pair using a 4096-bit key
+
+### Creating the private key 
+
+```
+openssl genrsa -out privatekey.pem 4096
+```
+
+### Extracting the public key from the key pair
+
+```
+openssl rsa -in privatekey.pem -outform PEM -pubout -out publickey.pem
+```
+
+### Screenshot
+
+![Screenshot from 2021-07-11 00-17-54](https://user-images.githubusercontent.com/75664650/125186164-5402f480-e246-11eb-992d-8caff358bf87.png)
+
+###### Public key file uploaded to the Question 3 folder (Link at the bottom of the document)
 
