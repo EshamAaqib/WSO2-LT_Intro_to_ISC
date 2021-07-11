@@ -143,6 +143,17 @@ print(key)
 ```
 ###### Code has been uploaded to the Question 8 folder as well. (Link at the bottom of the document)
 
+## 9. Using https://hashcat.net/hashcat/ and the wordlist available at https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/phpbb.txt to crack the MD5 value "3c2223212b6dde34bcf86b580bdb71d4" and recover the password
+
+### Cracked Password  -  woohooyeah
+
+### Screenshots 
+
+![Screenshot from 2021-07-11 04-53-26](https://user-images.githubusercontent.com/75664650/125194025-11084780-e26d-11eb-8d65-04fbe2450648.png)
+
+![Screenshot from 2021-07-11 04-53-29](https://user-images.githubusercontent.com/75664650/125194029-15ccfb80-e26d-11eb-8505-ee6f104619a7.png)
+
+
 
 
 
