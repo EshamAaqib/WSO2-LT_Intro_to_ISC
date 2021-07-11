@@ -77,6 +77,74 @@ penssl enc -aes-256-cbc -salt -in nistspecialpublication800-100.pdf -out nistspe
 
 ![Screenshot from 2021-07-11 00-47-43](https://user-images.githubusercontent.com/75664650/125187009-0b9a0580-e24b-11eb-8f90-ba063dbeeb03.png)
 
-###### Encrypted key file and the pdf file has been uploaded to the Question 4 folder (Link at the bottom of this document)
+###### Encrypted key file and the encrypted pdf file has been uploaded to the Question 4 folder (Link at the bottom of this document)
+
+## Calculating the SHA512 hash of the file https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-100.pdf
+
+```
+openssl dgst -sha512 nistspecialpublication800-100.pdf
+```
+
+### Screenshot
+
+![Screenshot from 2021-07-11 01-03-07](https://user-images.githubusercontent.com/75664650/125187334-c70f6980-e24c-11eb-99c8-ee8b0d98eb67.png)
+
+## 6. Writing a simple Python program to accept a value as a command line argument and return only the PBKDF2 hash of the value
+
+### Python Script
+
+```
+import hashlib
+import sys
+
+value=sys.argv[1].encode('utf-8')
+salt=b'Km5d5ivMy8iexuHcZrsD'
+key = hashlib.pbkdf2_hmac('sha512',value,salt,200000)
+print(key.hex())
+```
+
+###### Code has been uploaded to the Question 6 folder as well. (Link at the bottom of the document)
+
+### Screenshot
+
+![Screenshot from 2021-07-11 02-19-44](https://user-images.githubusercontent.com/75664650/125189859-dd6ef280-e257-11eb-8d1b-a8d6cdd32c6b.png)
+
+
+## 7. Modifying the script in Q6 to use a secure random as the salt value of PBKDF2 hash generation
+
+### Python Script
+
+```
+import hashlib
+import secrets 
+import sys
+
+value=sys.argv[1].encode('utf-8')
+salt=secrets.token_bytes()
+key = hashlib.pbkdf2_hmac('sha512',value,salt,200000)
+print(key.hex())
+```
+
+###### Code has been uploaded to the Question 7 folder as well. (Link at the bottom of the document)
+
+## 8. Modifiying the script in Q7 to use a secure random as the salt value and generate a SHA512 hash
+
+### Python Script
+
+```
+import hashlib
+import secrets 
+import sys
+
+value=sys.argv[1].encode('utf-8')
+salt=secrets.token_bytes()
+key=hashlib.sha512(salt+value).hexdigest()
+print(key)
+```
+###### Code has been uploaded to the Question 8 folder as well. (Link at the bottom of the document)
+
+
+
+
 
 
