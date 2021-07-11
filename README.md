@@ -184,6 +184,11 @@ gpg --recipient ayomawdb@gmail.com --encrypt nistspecialpublication800-100.pdf
 
 ### CVSS 3.1 vector string - CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:N
 
-## 
+## 13. Using https://testssl.sh/ to assess the TLS security levels of google.com domain
+
+### Screenshot
+
+![Screenshot from 2021-07-11 05-48-41](https://user-images.githubusercontent.com/75664650/125195736-9b07de80-e274-11eb-9133-5caff3e707fb.png)
+
 
 
