@@ -79,7 +79,7 @@ penssl enc -aes-256-cbc -salt -in nistspecialpublication800-100.pdf -out nistspe
 
 ###### Encrypted key file and the encrypted pdf file has been uploaded to the Question 4 folder (Link at the bottom of this document)
 
-## Calculating the SHA512 hash of the file https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-100.pdf
+## 5. Calculating the SHA512 hash of the file https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-100.pdf
 
 ```
 openssl dgst -sha512 nistspecialpublication800-100.pdf
