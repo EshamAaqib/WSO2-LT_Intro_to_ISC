@@ -68,7 +68,7 @@ openssl rsautl -encrypt -inkey public.pem -pubin -in key.bin -out key.bin.enc
 ### Now I encrypted the large PDF file using the random key by executing the following 
 
 ```
-penssl enc -aes-256-cbc -salt -in nistspecialpublication800-100.pdf -out nistspecialpublication800-100.pdf.enc -pass file:./key.bin
+openssl enc -aes-256-cbc -salt -in nistspecialpublication800-100.pdf -out nistspecialpublication800-100.pdf.enc -pass file:./key.bin
 ```
 
 ###### At this point the user will have to decrypt the random key file (key.bin) using the private key and use the decrypted key file to decrypt the encrypted PDF file
